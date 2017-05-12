@@ -1,0 +1,5 @@
+pipeline:
+  first:
+    image: php:7.1.4-cli
+    commands:
+      - php -v

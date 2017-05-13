@@ -1,19 +1,13 @@
 pipeline:
-  step:
-    image: php:${PHP_VERSION}
-    group: build
-    commands:
-      - php sleep.php
-  step2:
-    image: php:${PHP_VERSION}
-    group: build
-    commands:
-      - php sleep.php
-  step3:
-    image: php:${PHP_VERSION}
-    group: build
-    commands:
-      - php sleep.php
-matrix:
-  PHP_VERSION:
-      - 7.1-alpine
+  docker:
+    image: plugins/docker
+    registry: registry.devops17.patrickjahns.de
+    email: ${DOCKER_EMAIL}
+    repo: registry.devops17.patrickjahns.de/library/composer
+    tags:
+        - latest
+        - 1.4.1
+    file: Dockerfile
+    when:
+      branch: master
+      event: push

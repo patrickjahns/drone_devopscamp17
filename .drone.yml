@@ -4,8 +4,3 @@ pipeline:
     repo: registry.devops17.patrickjahns.de/library/composer
     tags:
         - latest
-        - 1.4.1
-    file: Dockerfile
-    when:
-      branch: master
-      event: push

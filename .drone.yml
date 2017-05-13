@@ -4,3 +4,9 @@ pipeline:
     pull: true
     commands:
       - composer install
+
+  test:
+    image: php:7.1.5-alpine
+    pull: true
+    commands:
+      - vendor/bin/phpunit

@@ -1,14 +1,17 @@
 pipeline:
   step:
     image: php:${PHP_VERSION}
+    group: build
     commands:
       - php sleep.php
   step2:
     image: php:${PHP_VERSION}
+    group: build
     commands:
       - php sleep.php
   step3:
     image: php:${PHP_VERSION}
+    group: build
     commands:
       - php sleep.php
 matrix:

@@ -1,10 +1,16 @@
 pipeline:
-  first:
+  step:
     image: php:${PHP_VERSION}
     commands:
-      - php -v
-      - php -i
-
+      - php sleep.php
+  step2:
+    image: php:${PHP_VERSION}
+    commands:
+      - php sleep.php
+  step3:
+    image: php:${PHP_VERSION}
+    commands:
+      - php sleep.php
 matrix:
   PHP_VERSION:
       - 7.1-alpine

@@ -3,4 +3,4 @@ pipeline:
     image: registry.devops17.patrickjahns.de/library/composer
     pull: true
     commands:
-      - composer install -q --no-scripts
+      - composer install

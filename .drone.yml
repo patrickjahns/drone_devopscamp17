@@ -17,4 +17,3 @@ pipeline:
 matrix:
   PHP_VERSION:
       - 7.1-alpine
-      - 7.0-alpine

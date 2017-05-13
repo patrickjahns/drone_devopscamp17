@@ -1,6 +1,11 @@
 pipeline:
   first:
-    image: php:7.1.4-cli
+    image: php:${PHP_VERSION}
     commands:
       - php -v
       - php -i
+
+matrix:
+  PHP_VERSION:
+      - 7.1-alpine
+      - 7.0-alpine
